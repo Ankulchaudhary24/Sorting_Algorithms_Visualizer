@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Author:-   Ankul Chaudhary
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizer</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/elements.css">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="array-inputs">
+            <script src="./scripts/updation.js"></script>
+                <p>Size of the array:</p>
+                <div class="size">
+                    <input id="a_size" type="range" min=5 max=155 step=1 value=75 onchange="updateTextInput(this.value,'a_size_value');">
+                    <input id="a_size_value" type="number" value="75" readonly>
+                </div>
+                <p>Speed of the algorithm:</p>
+                <div class="speed">
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=3 onchange="updateTextInput(this.value,'a_speed_value')">
+                <input id ="a_speed_value" type="number" value="3" readonly>
+                </div>
+                <button id="a_generate">Click to Generate New Array!</button>
+            </div>
+
+            <div class="header_right">
+                <p class="nav-heading">Sorting Algorithms visualizer</p>
+
+                <div class="algos">
+                    <button id="bubble" >Bubble</button>
+                    <button id="selection">Selection</button>
+                    <button id="insertion">Insertion</button>
+                    <button id="merge">Merge</button>
+                    <button id="quick">Quick</button>
+                    <button id="heap">Heap</button>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section>
+
+        <div id="Info_Cont1">
+            <p>This is First Container</p>
+        </div>
+
+        <div id="array_container">
+            
+        </div>
+
+        <div id="Info_Cont2">
+            <p>This is Second Container</p>
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
+
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+</body>
+
+</html>
