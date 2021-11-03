@@ -67,6 +67,20 @@ nav .array-inputs #a_generate {
   
 }
 
+nav .header_right #user_input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0% 0% 0% 0%;
+  
+}
+
+nav .header_right #user_input:hover {
+  cursor: pointer;
+  background-color: rgb(60, 160, 135);
+}
+
 nav .array-inputs #a_generate:hover {
   cursor: pointer;
   background-color: goldenrod;
@@ -146,7 +160,8 @@ section {
       grid-template-columns: 20% 60% 20%;
 }
 
-section #Info_Cont1 {
+section #container1 {
+  flex-direction: column;
   padding: 20%;
 }
 
@@ -158,7 +173,7 @@ section #array_container {
   height: 70vh;
 }
 
-section #Info_Cont2 {
+section #container2 {
   padding: 20%;
 }
 

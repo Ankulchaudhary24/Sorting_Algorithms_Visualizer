@@ -18,7 +18,6 @@
     <header>
         <nav>
             <div class="array-inputs">
-            <script src="./scripts/updation.js"></script>
                 <p>Size of the array:</p>
                 <div class="size">
                     <input id="a_size" type="range" min=5 max=155 step=1 value=75 onchange="updateTextInput(this.value,'a_size_value');">
@@ -30,6 +29,7 @@
                 <input id ="a_speed_value" type="number" value="3" readonly>
                 </div>
                 <button id="a_generate">Click to Generate New Array!</button>
+                
             </div>
 
             <div class="header_right">
@@ -43,6 +43,7 @@
                     <button id="quick">Quick</button>
                     <button id="heap">Heap</button>
                 </div>
+                <button id="user_input">Give array elements(1&LeftAngleBracket;=size&LeftAngleBracket;=100) </button>
             </div>
 
         </nav>
@@ -50,16 +51,14 @@
 
     <section>
 
-        <div id="Info_Cont1">
-            <p>This is First Container</p>
+        <div id="container1">
         </div>
 
         <div id="array_container">
             
         </div>
 
-        <div id="Info_Cont2">
-            <p>This is Second Container</p>
+        <div id="container2">
         </div>
 
     </section>
@@ -69,6 +68,7 @@
     </footer>
 
     <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/updation.js"></script>
     <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
 
     <script src="./scripts/bubble_sort.js"></script>

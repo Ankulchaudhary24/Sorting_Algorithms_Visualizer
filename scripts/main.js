@@ -31,6 +31,7 @@ function generate_array()
         divs[i]=document.createElement("div");
         cont.appendChild(divs[i]);
         margin_size=0.1;
+        divs[i].setAttribute("id","divs"+String(i));
         divs[i].style=" margin:0% " + margin_size + "%; background-color:blue; width:" + (100/array_size-(2*margin_size)) + "%; height:" + (div_sizes[i]) + "%;";
     }
 }
@@ -42,6 +43,44 @@ function update_array_size()
 }
 
 window.onload=update_array_size();
+
+//addition of the input boxes for the user inputted array sizes
+var content1=document.getElementById("container1");
+var content2=document.getElementById("container2");
+var div =[];
+var user_input=document.getElementById("user_input");
+user_input.addEventListener("click",generate_columns);
+inp_as.addEventListener("change",generate_columns);
+function generate_columns()
+{ 
+    content1.innerHTML="";
+    content2.innerHTML="";
+    var i =0;
+    for(;i<inp_as.value/2;i++)
+    {
+        div[i]=document.createElement("input");
+        div[i].setAttribute("id",String(i));
+        div[i].setAttribute("type","number");
+        div[i].style=" width: 25%; height: 7%;";
+        div[i].addEventListener("change",function(){
+            document.getElementById("divs"+String(this.id)).style.height = String(this.value+"%");
+        });
+        content1.appendChild(div[i]);
+    }
+    for(;i<inp_as.value;i++){
+        div[i]=document.createElement("input");
+        div[i].setAttribute("id",String(i));
+        div[i].setAttribute("type","number");
+        div[i].style=" width: 25%; height: 7%;";
+        div[i].addEventListener("change",function(){
+            document.getElementById("divs"+String(this.id)).style.height = String(this.value+"%");
+        });
+        content2.appendChild(div[i]);
+    }
+    
+}
+
+//end addition
 
 //Running the appropriate algorithm.
 for(var i=0;i<butts_algos.length;i++)
